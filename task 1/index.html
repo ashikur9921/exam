@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 850px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      flex: 1 1 48%;
+      min-width: 280px;
+    }
+
+    .form-group label {
+      width: 130px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      font-size: 15px;
+    }
+
+    .form-group input:focus {
+      border-color: #764ba2;
+      outline: none;
+      box-shadow: 0 0 6px rgba(118, 75, 162, 0.4);
+    }
+
+    .gender-row {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .gender-row label {
+      width: 130px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 20px;
+    }
+
+    .gender-options label {
+      font-weight: 400;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.95;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      .gender-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .gender-row label {
+        margin-bottom: 5px;
+      }
+
+      .submit-btn {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="card">
+    <h2>Registration Form</h2>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname">
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm</label>
+        <input type="password" id="confirm" name="confirm">
+      </div>
+    </div>
+
+    <div class="gender-row">
+      <label>Gender</label>
+      <div class="gender-options">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Register</button>
+  </form>
+
+</body>
+</html>
